@@ -4,7 +4,8 @@ import '../utils/colors.dart';
 
 class CustomButton extends StatelessWidget {
   final String text;
-  const CustomButton({super.key, required this.text});
+  final Function() onPressed;
+  const CustomButton({super.key, required this.text, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +13,7 @@ class CustomButton extends StatelessWidget {
       onPressed: () {},
       child: Text(
         text,
-        style: TextStyle(fontSize: 20),
+        style: TextStyle(fontSize: 17),
       ),
       style: ElevatedButton.styleFrom(
         primary: buttonColor,
